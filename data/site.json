@@ -1,0 +1,67 @@
+{
+  "banner": "images/home-banner.png",
+  "title": "在世界裡旅行，\n在生活裡生長。",
+  "intro": "我是 Malaika（柔安），一位透過藝術探索世界、土地與生命的創作者。",
+  "artworks": [
+    {
+      "image": "images/island-01.jpg",
+      "title": "東吉燈塔",
+      "visible": true
+    },
+    {
+      "image": "images/island-02.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-03.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-04.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-05.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-06.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-07.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-08.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-09.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-10.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-11.jpg",
+      "title": "",
+      "visible": true
+    },
+    {
+      "image": "images/island-12.jpg",
+      "title": "",
+      "visible": true
+    }
+  ]
+}
