@@ -1,0 +1,33 @@
+backend:
+  name: turbo-github
+  turbo_site_id: a8916549-76d0-404d-8398-a18eedb16988
+locale: zh_Hant
+media_folder: images
+public_folder: images
+collections:
+  - name: website
+    label: 網站管理
+    files:
+      - name: home
+        label: 首頁與島嶼日常
+        file: data/site.json
+        fields:
+          - {label: 首頁封面, name: banner, widget: image}
+          - {label: 首頁標題, name: title, widget: text}
+          - {label: 首頁介紹, name: intro, widget: text}
+          - label: 藝術作品
+            name: artworks
+            widget: list
+            fields:
+              - {label: 作品圖片, name: image, widget: image}
+              - {label: 作品名稱, name: title, widget: string, required: false}
+              - {label: 英文名稱, name: english, widget: string, required: false}
+              - {label: 媒材, name: medium, widget: string, required: false}
+              - {label: 尺寸, name: size, widget: string, required: false}
+              - {label: 年份, name: year, widget: string, required: false}
+              - {label: 作品介紹, name: description, widget: text, required: false}
+              - {label: 收藏與租借狀態, name: status, widget: select, multiple: true, required: false, options: [可收藏, 可出租, 已售出, 出租中, 非賣品]}
+              - {label: 售價, name: price, widget: string, required: false}
+              - {label: 租金, name: rent, widget: string, required: false}
+              - {label: 租借說明, name: rentalNote, widget: text, required: false}
+              - {label: 公開展示, name: visible, widget: boolean, default: true}
