@@ -1,4 +1,19 @@
 {
-  "description": "透過植物、陽光與水，探索自然留下的痕跡。",
-  "artworks": []
+  "cover": "images/img_8864-3.jpg",
+  "description": "探索陰影與陽光的關係，最後透過水來轉化，「藍曬」便是一門太陽的藝術。",
+  "artworks": [
+    {
+      "size": "22x30cm",
+      "price": "500元",
+      "english": "Trust the flow, trust the Light.",
+      "visible": true,
+      "status": [
+        "可收藏"
+      ],
+      "medium": "藍曬",
+      "title": "信任流 還有光",
+      "image": "images/img_8889.jpg",
+      "year": "2025年"
+    }
+  ]
 }
