@@ -4,9 +4,19 @@
   "intro": "我是 Malaika（柔安），一位透過藝術探索世界、土地與生命的創作者。",
   "artworks": [
     {
-      "image": "images/island-01.jpg",
+      "size": "25x25cm/ 含框 35X35cm",
+      "english": "Dongji Lighthouse",
+      "visible": true,
+      "status": [
+        "可出租"
+      ],
+      "medium": "油畫棒",
+      "rentalNote": "租借作品含框，提供3M無痕掛勾一枚，運費由租借者自付。",
       "title": "東吉燈塔",
-      "visible": true
+      "rent": "一幅$400/月；租借三幅$1000/月",
+      "image": "images/island-01.jpg",
+      "description": "東吉燈塔位於南方四島國家公園的東吉嶼，建於1911年。\n黑白相間的塔身矗立於草原上，是守護台灣海峽航行安全的重要地標。",
+      "year": "2026"
     },
     {
       "image": "images/island-02.jpg",
