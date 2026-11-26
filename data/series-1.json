@@ -1,19 +1,48 @@
 {
   "cover": "images/img_8864-3.jpg",
-  "description": "探索陰影與陽光的關係，最後透過水來轉化，「藍曬」便是一門太陽的藝術。",
+  "description": "「藍曬」是一門太陽的藝術，用陰影與陽光來創作，再透過水來顯影。\n對我而言，藍曬不只是一種創作方式，更讓我看見事物「一體兩面」的特質，我因此從中感到被療癒。\n",
   "artworks": [
     {
-      "size": "22x30cm",
-      "price": "500元",
-      "english": "Trust the flow, trust the Light.",
+      "size": "A4｜25x32cm（實際會再大約5cm）",
+      "price": "555元",
+      "english": "Trust the Flow, trust the Light.",
       "visible": true,
       "status": [
         "可收藏"
       ],
       "medium": "藍曬",
-      "title": "信任流 還有光",
+      "title": "信任流與光",
       "image": "images/img_8889.jpg",
+      "description": "在澎湖生活的五年裡，有許多迷茫和不安，我就像一艘在大海裡航行的船，只能任憑流的帶領，我試著相信「流」會將我帶到我該去的地方，同時也相信「光」會指引著我。",
       "year": "2025年"
+    },
+    {
+      "size": "A2｜約45x62cm (實際會再大約5cm)",
+      "price": "1333元",
+      "english": "PachaＭama No.1",
+      "visible": true,
+      "status": [
+        "可收藏"
+      ],
+      "medium": "藍曬",
+      "title": "大地之母 1號 ",
+      "image": "images/img_8864-3.jpg",
+      "description": "在藍曬的沉靜中，宇宙與地球相連，豐盛的能量共舞著。 \n鳥兒是天地的信使，而我如大樹般，成為那道最清透的管道——— \n向下，深根地心鑽石； 向上，連結天際星斗。 \n我在天地之間，我是大地母親，承接宇宙不息的豐盛。",
+      "year": "2024年"
+    },
+    {
+      "size": "A4｜25x32cm（實際會再大約5cm）",
+      "price": "666",
+      "english": "PachaMama No.2",
+      "visible": true,
+      "status": [
+        "可收藏"
+      ],
+      "medium": "藍曬",
+      "title": "大地媽媽 2號",
+      "image": "images/靛藍冥想樹藝術畫.png",
+      "description": "在藍曬的沉靜中，宇宙與地球相連，豐盛的能量共舞著。\n鳥兒是天地的信使，而我如大樹般，成為那道最清透的管道———\n向下，深根地心鑽石；\n向上，連結天際星斗。\n我在天地之間，我是大地母親，承接宇宙不息的豐盛。",
+      "year": "2024年"
     }
   ]
 }
