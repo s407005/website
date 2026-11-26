@@ -1,26 +1,37 @@
 {
   "cover": "images/island-01.jpg",
-  "description": "以油畫棒與插畫記錄海洋、漁村與日常光景。",
+  "description": "以油畫棒與插畫記錄海洋、島嶼的日常光景。",
   "artworks": [
     {
-      "size": "25x25cm/ 含框 35X35cm",
+      "size": "25x25cm/ 含框 35x35cm",
       "english": "Dongji Lighthouse",
       "visible": true,
       "status": [
         "可出租"
       ],
       "medium": "油畫棒",
-      "rentalNote": "租借作品含框，提供3M無痕掛勾一枚，運費由租借者負擔，第一次租借須繳交保證金$3000元，畫作返回時若畫作狀態無損，保證金將一併歸還。",
+      "rentalNote": "租借作品含框，提供3M無痕掛勾一枚，運費由租借者負擔（超商店到店$60），第一次租借須繳交保證金$3000元，畫作返回時若畫作狀態無損，保證金將一併歸還。",
       "title": "東吉燈塔",
-      "rent": "一幅$400/月；租借三幅$1000/月",
+      "rent": "一幅租借一個月$400；租借三個月為$1000，或租借三幅一個月為$1000",
       "image": "images/island-01.jpg",
       "description": "東吉燈塔位於南方四島國家公園的東吉嶼，建於1911年。\n黑白相間的塔身矗立於草原上，是守護台灣海峽航行安全的重要地標。",
       "year": "2026"
     },
     {
+      "size": "25x25cm/ 含框 35x35cm",
+      "price": "",
+      "english": "Huxi grassland",
+      "visible": true,
+      "status": [
+        "可出租"
+      ],
+      "medium": "油畫棒",
+      "rentalNote": "租借作品含框，提供3M無痕掛勾一枚，運費由租借者負擔（超商店到店$60），第一次租借須繳交保證金$3000元，畫作返回時若畫作狀態無損，保證金將一併歸還。",
+      "title": "湖西草原",
+      "rent": "一幅租借一個月$400；租借三個月為$1000，或租借三幅一個月為$1000",
       "image": "images/island-02.jpg",
-      "title": "",
-      "visible": true
+      "description": "湖西鄉擁有遼闊的草原，偶爾能看見牛隻悠閒地吃草，隨著季節更迭，草地呈現不同色彩，展現澎湖樸實的鄉村景致。",
+      "year": "2025"
     },
     {
       "image": "images/island-03.jpg",
