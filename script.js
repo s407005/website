@@ -17,7 +17,42 @@ else if(p==='projects')s=`<section>${head('EXHIBITIONS','展覽紀錄')}${entry(
 else if(p==='commercial')s=`<section>${head('COMMERCIAL PORTFOLIO','商業接案')}<p>透過插畫與視覺創作，將不同品牌、地方文化與故事轉化為圖像。</p><div class="grid">${['書籍與出版插畫','地方文化與視覺設計','品牌與客製插畫'].map(t=>`<div class="entry"><small>PORTFOLIO</small><h3>${t}</h3><p>正式案例與作品照片待補充。</p></div>`).join('')}</div>${btn('contact','商業合作邀約')}</section>`;
 else if(p==='shop')s=`<section>${head('SHOP','把藝術帶回生活')}<div class="grid">${['2027 澎湖日常月曆','澎湖的12片海 明信片','圖文書','自然媒材作品'].map((t,i)=>`<div>${i===3?art(1):'<div class="entry">商品照片待補充</div>'}<h3>${t}</h3>${btn('contact','購買詢問')}</div>`).join('')}</div><p>展示模式，尚未串接訂購及付款。</p></section>`;
 else if(p==='contact')s=`<section>${head('CONTACT','讓我們一起創造')}<p>歡迎插畫委託、出版合作、展覽邀請及工作坊邀約。</p><form id="form"><label>姓名或單位<input required name="name"></label><label>Email<input required type="email" name="email"></label><label>合作內容<textarea required rows="5" name="message"></textarea></label><button class="button">預覽訊息</button></form><p id="result" role="status"></p><p class="note">試用表單不會傳送或儲存資料。</p></section>`;
-else {location.hash='home';return}document.querySelector('#main').innerHTML=s;let f=document.querySelector('#form');if(f)f.onsubmit=e=>{e.preventDefault();document.querySelector('#result').textContent='預覽完成，尚未連接寄信服務。'};window.scrollTo(0,0)}
+else {location.hash='home';return}document.querySelector('#main').innerHTML=s;if(/^(painting\d+|series[1-3]-\d+)$/.test(p))setupArtworkZoom(document.querySelector('#main .hero img'));let f=document.querySelector('#form');if(f)f.onsubmit=e=>{e.preventDefault();document.querySelector('#result').textContent='預覽完成，尚未連接寄信服務。'};window.scrollTo(0,0)}
 let currentPainting=0;function showPainting(i){currentPainting=(i+islandImages.length)%islandImages.length;document.getElementById('largePainting').src=islandImages[currentPainting];document.getElementById('counter').textContent=(currentPainting+1)+' / '+islandImages.length;let d=document.getElementById('viewer');if(!d.open)d.showModal();}document.addEventListener('keydown',e=>{if(document.getElementById('viewer').open){if(e.key==='ArrowLeft')showPainting(currentPainting-1);if(e.key==='ArrowRight')showPainting(currentPainting+1);}});window.addEventListener('hashchange',render);render();fetch('data/site.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('data');return r.json()}).then(d=>{site=d;render()}).catch(()=>{});
 
 Promise.all([0,1,2,3].map(i=>fetch('data/series-'+i+'.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('series '+i);return r.json()}).then(d=>{seriesData[i]=d}).catch(()=>{}))).then(render);
+
+function setupArtworkZoom(image){
+ if(!image)return;
+ const hero=image.parentElement;
+ const frame=document.createElement('div');
+ frame.style.cssText='position:relative;display:inline-block;max-width:100%;vertical-align:top;line-height:0;';
+ hero.style.textAlign='center';
+ hero.insertBefore(frame,image);frame.appendChild(image);
+ image.style.cssText='display:block;width:auto;height:auto;max-width:100%;max-height:70vh;object-fit:contain;cursor:zoom-in;';
+ const lens=document.createElement('div');
+ lens.setAttribute('aria-hidden','true');
+ lens.style.cssText='display:none;position:absolute;pointer-events:none;border-radius:50%;border:2px solid white;box-shadow:0 2px 12px #0005;z-index:2;background-repeat:no-repeat;box-sizing:border-box;';
+ frame.appendChild(lens);
+ const hint=document.createElement('p');hint.style.cssText='font-size:.85rem;text-align:center;margin:.6rem 0;color:inherit;';hint.textContent='⌕ 移動游標查看細節・觸控螢幕可點按放大';hero.after(hint);
+ function hide(){lens.style.display='none';}
+ function move(e){
+  if(e.pointerType==='touch')return;
+  const r=image.getBoundingClientRect();if(!image.complete||!image.naturalWidth||!r.width||!r.height)return;
+  const x=e.clientX-r.left,y=e.clientY-r.top;if(x<0||y<0||x>r.width||y>r.height){hide();return;}
+  const size=Math.min(180,r.width,r.height),z=2.5;
+  const lx=Math.max(0,Math.min(r.width-size,x-size/2)),ly=Math.max(0,Math.min(r.height-size,y-size/2));
+  lens.style.width=lens.style.height=size+'px';lens.style.left=lx+'px';lens.style.top=ly+'px';
+  lens.style.backgroundImage='url('+JSON.stringify(image.currentSrc||image.src)+')';
+  lens.style.backgroundSize=r.width*z+'px '+r.height*z+'px';
+  lens.style.backgroundPosition=(size/2-x*z)+'px '+(size/2-y*z)+'px';lens.style.display='block';
+ }
+ image.addEventListener('pointermove',move);image.addEventListener('pointerleave',hide);
+ image.addEventListener('pointercancel',hide);
+ image.addEventListener('click',()=>{if(!matchMedia('(hover: none), (pointer: coarse)').matches)return;
+  const d=document.createElement('dialog');d.style.cssText='padding:12px;max-width:96vw;max-height:94vh;overflow:auto;border:0;background:#fff;';
+  const close=document.createElement('button');close.textContent='關閉 ×';close.style.cssText='position:sticky;top:0;display:block;margin:0 0 8px auto;z-index:1;';
+  const full=document.createElement('img');full.src=image.currentSrc||image.src;full.alt=image.alt;full.style.cssText='display:block;width:200vw;max-width:none;height:auto;';
+  d.append(close,full);document.body.appendChild(d);close.onclick=()=>d.close();d.addEventListener('close',()=>d.remove(),{once:true});d.showModal();
+ });
+}
