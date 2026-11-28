@@ -127,6 +127,7 @@ collections:
         label: 編輯商品
         file: data/shop.json
         fields:
+          - {label: 澎湖的12片海 明信片系列封面, name: postcardCover, widget: image, required: false}
           - label: 商品
             name: products
             widget: list
