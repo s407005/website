@@ -1,5 +1,15 @@
 {
-  "cover": "",
+  "cover": "images/img_4918.jpeg",
   "description": "",
-  "products": []
+  "products": [
+    {
+      "id": "Calendar-01",
+      "title": "2027月曆 澎湖的12片光影",
+      "images": [
+        "images/img_4892.jpeg"
+      ],
+      "price": 660,
+      "status": "販售中"
+    }
+  ]
 }
