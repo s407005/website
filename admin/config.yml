@@ -119,3 +119,31 @@ collections:
               - {label: 租金, name: rent, widget: string, required: false}
               - {label: 租借說明, name: rentalNote, widget: text, required: false}
               - {label: 公開展示, name: visible, widget: boolean, default: true}
+
+  - name: shop
+    label: 商店商品管理
+    files:
+      - name: products
+        label: 編輯商品
+        file: data/shop.json
+        fields:
+          - label: 商品
+            name: products
+            widget: list
+            fields:
+              - {label: 商品編號（不可重複）, name: id, widget: string}
+              - {label: 商品名稱, name: title, widget: string}
+              - {label: 英文名稱, name: english, widget: string, required: false}
+              - {label: 商品分類, name: category, widget: string}
+              - label: 商品照片
+                name: images
+                widget: list
+                required: false
+                field: {label: 圖片, name: image, widget: image}
+              - {label: 商品介紹, name: description, widget: text, required: false}
+              - {label: 尺寸, name: size, widget: string, required: false}
+              - {label: 材質與媒材, name: medium, widget: string, required: false}
+              - {label: 紙質, name: paper, widget: string, required: false}
+              - {label: 售價（元）, name: price, widget: number, value_type: int, min: 0}
+              - {label: 庫存, name: stock, widget: number, value_type: int, min: 0, required: false}
+              - {label: 販售狀態, name: status, widget: select, options: [販售中, 售完, 下架]}
