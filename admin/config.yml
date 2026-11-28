@@ -161,7 +161,20 @@ collections:
               - {label: 商品編號（不可重複）, name: id, widget: string}
               - {label: 商品名稱, name: title, widget: string}
               - {label: 英文名稱, name: english, widget: string, required: false}
-              - label: 商品照片
+              - {label: 月曆封面, name: calendarCover, widget: image, required: false}
+              - {label: 1月圖片, name: month1, widget: image, required: false}
+              - {label: 2月圖片, name: month2, widget: image, required: false}
+              - {label: 3月圖片, name: month3, widget: image, required: false}
+              - {label: 4月圖片, name: month4, widget: image, required: false}
+              - {label: 5月圖片, name: month5, widget: image, required: false}
+              - {label: 6月圖片, name: month6, widget: image, required: false}
+              - {label: 7月圖片, name: month7, widget: image, required: false}
+              - {label: 8月圖片, name: month8, widget: image, required: false}
+              - {label: 9月圖片, name: month9, widget: image, required: false}
+              - {label: 10月圖片, name: month10, widget: image, required: false}
+              - {label: 11月圖片, name: month11, widget: image, required: false}
+              - {label: 12月圖片, name: month12, widget: image, required: false}
+              - label: 其他商品照片
                 name: images
                 widget: list
                 required: false
@@ -169,6 +182,8 @@ collections:
               - {label: 商品介紹, name: description, widget: text, required: false}
               - {label: 尺寸, name: size, widget: string, required: false}
               - {label: 材質與媒材, name: medium, widget: string, required: false}
+              - {label: 裝訂方式, name: binding, widget: string, required: false}
+              - {label: 優惠售價（元）, name: salePrice, widget: number, value_type: int, min: 1, required: false}
               - {label: 紙質, name: paper, widget: string, required: false}
               - {label: 售價（元）, name: price, widget: number, value_type: int, min: 0}
               - {label: 庫存, name: stock, widget: number, value_type: int, min: 0, required: false}
