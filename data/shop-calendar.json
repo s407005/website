@@ -4,14 +4,18 @@
   "products": [
     {
       "month11": "images/img_4931.jpeg",
+      "size": "B4（25.7 × 36.4 cm）",
       "month12": "images/img_4919.jpeg",
+      "binding": "白色鐵線圈，畫作設有裁切線，方便撕下裱框",
       "price": 660,
+      "paper": "麗綺水彩紙 240g",
       "month1": "images/img_4921.jpeg",
       "month2": "images/img_4922.jpeg",
       "status": "販售中",
       "month3": "images/img_4923.jpeg",
       "month4": "images/img_4924.jpeg",
       "month5": "images/img_4925.jpeg",
+      "medium": "油畫棒、色鉛筆，數位印刷",
       "month6": "images/img_4926.jpeg",
       "month7": "images/img_4927.jpeg",
       "month8": "images/img_4928.jpeg",
@@ -22,11 +26,8 @@
       "month9": "images/img_4929.jpeg",
       "calendarCover": "images/img_4918.jpeg",
       "id": "Calendar-01",
-      "month10": "images/img_4930.jpeg",
-      "description": "這次我花了很多心思在畫畫，每一幅都一再超越自己的極限，每一幅我都真的很喜歡。\n\n共13頁（封面＋12個月）。\n每一本皆贈送一張畫作明信片（隨機出貨）。\n運費：超商店到店 NT$60，滿四本免運費。\n出貨時間：2026年12月7日（一）依表單順序開始陸續出貨。",
-      "size": "B4（25.7 × 36.4 cm）",
-      "paper": "麗綺水彩紙 240g",
-      "binding": "白色鐵線圈，畫作設有裁切線，方便撕下裱框"
+      "description": "這次我花了很多心思在畫畫，每一幅都一再超越自己的極限，每一幅我都真的很喜歡。\n\n共13頁（封面＋12個月）。\n每一本皆贈送一張畫作明信片（隨機出貨）。\n運費：超商店到店 NT$60。\n出貨時間：2026年12月7日（一）依購買順序開始陸續出貨。",
+      "month10": "images/img_4930.jpeg"
     }
   ]
 }
